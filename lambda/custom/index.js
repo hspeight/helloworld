@@ -5,7 +5,7 @@ const LaunchRequestHandler = {
         return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speechText = 'Hello World!';
+        const speechText = 'Hello Worldly wise ones!';
 
         return handlerInput.responseBuilder
             .speak(speechText)
@@ -22,11 +22,11 @@ const HelloWorldIntentHandler = {
     handle(handlerInput) {
         const speechText = 'Hello World!';
         const attributes = handlerInput.attributesManager.getSessionAttributes();
-        attributes.activity = 'eating';
+        attributes.activity = 'eating disorder';
 
         return handlerInput.responseBuilder
             .speak(speechText)
-            .withSimpleCard('Hello World', speechText)
+            .withSimpleCard('Hello World and planet', speechText)
             .getResponse();
     },
 };
